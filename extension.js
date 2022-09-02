@@ -4,10 +4,10 @@ const MainLoop = imports.mainloop;
 const GLib = imports.gi.GLib;
 
 let panelButton, panelButtonText, timeout;
-const SCRIPT_PATH = '/home/seif/Documents/other/scripts/ram-usage.sh'
+const SCRIPT_PATH = '/home/seif/Documents/other/scripts/usage.sh'
 function setButtonText() {
     const [ok, out, err, exit] = GLib.spawn_command_line_sync(SCRIPT_PATH)
-    panelButtonText.set_text("RAM usage: " + out.toString())
+    panelButtonText.set_text(out.toString())
     return true
 }
 
@@ -17,7 +17,6 @@ function init() {
     })
     panelButtonText = new St.Label({
         style_class: "panel",
-        text: "ram usage"
     })
     panelButton.set_child(panelButtonText)
 }

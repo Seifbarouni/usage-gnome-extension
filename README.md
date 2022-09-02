@@ -1,2 +1,2 @@
 # usage-gnome-extension
-a gnome extension that helps me see my RAM usage in real-time
+a gnome extension that helps me see my resource usage in real-time
